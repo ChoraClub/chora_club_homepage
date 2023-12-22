@@ -2,7 +2,12 @@ import React from 'react'
 
 function OfficeHours_Delegate() {
     return (
-        <div>OfficeHours_Delegate</div>
+        <div>
+            <div className='m-3'>
+
+                OfficeHours_Delegate
+            </div>
+        </div>
     )
 }
 
