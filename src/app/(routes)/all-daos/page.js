@@ -14,7 +14,7 @@ export default function page() {
     <div className="p-10">
       <div>
         <button
-          className={`pe-5 py-2 text-xl font-bold text-gray-700 ${
+          className={`pe-5 py-2 text-xl font-bold  ${
             activePage === "daos" ? "text-gray-800" : "text-gray-300"
           } hover:text-gray-800`}
           onClick={() => handleButtonClick("daos")}
@@ -22,7 +22,7 @@ export default function page() {
           All DAOs
         </button>
         <button
-          className={`pe-5 py-2 text-xl font-bold text-gray-700 ${
+          className={`pe-5 py-2 text-xl font-bold  ${
             activePage === "office-hours" ? "text-gray-800" : "text-gray-300"
           } hover:text-gray-800`}
           onClick={() => handleButtonClick("office-hours")}
