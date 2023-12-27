@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 function DaoOfficeHours() {
-  return (
-    <div>Dao OfficeHours</div>
-  )
+  return <div>Dao OfficeHours</div>;
 }
 
-export default DaoOfficeHours
+export default DaoOfficeHours;
