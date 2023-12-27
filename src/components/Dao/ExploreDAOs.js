@@ -27,7 +27,7 @@ function ExploreDAOs() {
   return (
     <div className="grid min-[475px]:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5  gap-10">
       {daoInfo.map((daos) => (
-        <div className="p-5 border-2 rounded-xl">
+        <div key={daos.name} className="p-5 border-2 rounded-xl">
           <div className="flex justify-center">
             <Image
               src={daos.img}
@@ -46,10 +46,10 @@ function ExploreDAOs() {
               className="bg-blue-400 hover:bg-blue-500 text-white font-semibold py-2 w-full rounded"
               onClick={() => handleButtonClick(daos.name)}
 
-              // href={{
-              //   pathname: `/all-daos/${daos.name}`,
-              //   query:  `${daos}`,
-              // }}
+            // href={{
+            //   pathname: `/all-daos/${daos.name}`,
+            //   query:  `${daos}`,
+            // }}
             >
               View More
             </button>

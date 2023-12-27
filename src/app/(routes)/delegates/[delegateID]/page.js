@@ -2,6 +2,8 @@
 
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
+import delegateLogo from "../../../../assets/arbitrum.jpg"
+import Image from 'next/image';
 
 export default function IndividualDelegate({ params }) {
     // const searchParams = useSearchParams();
@@ -17,13 +19,22 @@ export default function IndividualDelegate({ params }) {
     };
 
     const voteDistributionArray = Object.entries(votingInfo["For / Against / Abstain"]);
-
+    const delegateImage = delegateLogo;
+    const delegateName = "John Doe"; // Replace with actual delegate name
 
     return (
         <div className="flex justify-center items-center h-screen bg-gray-100">
             <div className="bg-white shadow-md p-6 rounded-lg w-96">
-                <h2 className="text-2xl font-bold mb-4 text-blue-600">Individual Delegate</h2>
+                {/* <h2 className="text-2xl font-bold mb-4 text-blue-600">Individual Delegate</h2> */}
+                <div className="flex items-center mb-4">
+                    {/* Image on the left side */}
+                    <Image src={delegateLogo} alt="Delegate" className="w-12 h-12 rounded-full mr-4" />
 
+                    {/* Name on the right side */}
+                    <h2 className="text-lg font-bold text-blue-600">{params.delegateID}</h2>
+                    {/* <h2 className="text-lg font-bold text-blue-600">{delegateName}</h2> */}
+                </div>
+                <hr className='mb-4' />
                 <div className="mb-4">
                     {Object.entries(votingInfo).map(([key, value]) => (
                         <div key={key} className="flex justify-between text-sm text-gray-600 mb-2">
