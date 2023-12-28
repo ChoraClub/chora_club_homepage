@@ -86,8 +86,8 @@ function HowItWorks() {
         <div className="grid grid-cols-2 gap-8 font-poppins">
           {/* Containers mapping*/}
 
-          {container.map((data) => (
-            <div className="">
+          {container.map((data, index) => (
+            <div key={index} className="">
               <div className="h-72">
                 <div className="flex justify-center">
                   <Image
