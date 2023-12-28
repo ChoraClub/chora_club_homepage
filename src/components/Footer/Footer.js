@@ -8,7 +8,7 @@ import discord from "@/assets/footer/discord.png";
 
 function Footer() {
   return (
-    <div className="bg-light-navy-blue p-7">
+    <div className="bg-light-navy-blue p-7 font-poppins">
       <div>
         <Link href="/" className="flex justify-center">
           <Image src={footer_logo} width={180}></Image>
