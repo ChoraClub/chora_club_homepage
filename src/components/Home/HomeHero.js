@@ -25,7 +25,7 @@ function HomeHero() {
         </div>
       </div>
       <div>
-        <Image src={hero} width={600}></Image>
+        <Image src={hero} width={600} quality="100" unoptimized={true}></Image>
       </div>
     </div>
   );

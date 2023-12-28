@@ -23,7 +23,7 @@ export default function IndividualDelegate({ params }) {
     const delegateName = "John Doe"; // Replace with actual delegate name
 
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="flex justify-center items-center h-screen">
             <div className="bg-white shadow-md p-6 rounded-lg w-96">
                 {/* <h2 className="text-2xl font-bold mb-4 text-blue-600">Individual Delegate</h2> */}
                 <div className="flex items-center mb-4">
