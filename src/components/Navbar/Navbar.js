@@ -6,14 +6,21 @@ import Image from "next/image";
 
 function Navbar() {
   return (
-    <header>
+    <header className="font-poppins">
+      {/* <ConnectButton className="connectbutton" /> */}
       <div className="m-3 h-16 bg-black sticky top-0 rounded-full">
         <div className="px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Link href="/" className="ps-10">
               <Image src={logo} alt="Logo" width={180}></Image>
             </Link>
-            <ul className="hidden md:flex gap-x-6 text-white mr-2">
+            <ul className="flex gap-x-6 text-white">
+              <li>
+                <Link href="/about">
+                  <p>About Us</p>
+                </Link>
+              </li>
+
               <li>Connect Button</li>
             </ul>
             {/* <ConnectButton className="connectbutton" /> */}

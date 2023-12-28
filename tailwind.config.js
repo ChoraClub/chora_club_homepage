@@ -12,10 +12,17 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
 
-        "home-texture": "url('../assets/home/bg-info.png')",
+        "home-info-texture": "url('../assets/home/bg-info.png')",
+        "home-working-texture": "url('../assets/home/bg-working.png')",
+        "home-working-texture2": "url('../assets/home/bg-working2.png')",
+        "home-working-texture3": "url('../assets/home/bg-working3.png')",
       },
       colors: {
         "light-navy-blue": "#004DFF",
+      },
+      fontFamily: {
+        quanty: ["var(--font-quanty)"],
+        poppins: ["var(--font-poppins)"],
       },
     },
   },
