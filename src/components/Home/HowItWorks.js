@@ -33,7 +33,8 @@ function HowItWorks() {
         <div className="grid grid-cols-3 gap-6 pe-16 font-poppins">
           {/* {workingDetails.map((data) => ( */}
           <div
-            className={`bg-home-working-texture border border-light-navy-blue p-10 rounded-3xl shadow-lg`}
+            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
+            className={`bg-home-working-texture border border-light-navy-blue p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl h-16">
               Discover DAOs
@@ -48,7 +49,8 @@ function HowItWorks() {
           {/* ))} */}
 
           <div
-            className={`bg-home-working-texture2 border border-light-navy-blue p-10 rounded-3xl shadow-lg`}
+            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
+            className={`bg-home-working-texture2 border border-light-navy-blue p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl h-16">
               Fast-track Learning with Delegate Dialogues
@@ -62,7 +64,8 @@ function HowItWorks() {
           </div>
 
           <div
-            className={`bg-home-working-texture3 border border-light-navy-blue p-10 rounded-3xl shadow-lg`}
+            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
+            className={`bg-home-working-texture3 border border-light-navy-blue p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl h-16">
               Become an Active Participant
@@ -85,8 +88,14 @@ function HowItWorks() {
 
           {container.map((data) => (
             <div className="">
-              <div className="flex justify-center">
-                <Image src={data.image} width={400} unoptimized={true}></Image>
+              <div className="h-72">
+                <div className="flex justify-center">
+                  <Image
+                    src={data.image}
+                    width={400}
+                    unoptimized={true}
+                  ></Image>
+                </div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-semibold text-light-navy-blue py-3">

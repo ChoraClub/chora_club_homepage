@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import hero from "@/assets/home/hero-img2.png";
+import hero from "@/assets/home/hero-img3.png";
 import rocket from "@/assets/home/rocket.png";
 
 function HomeHero() {
@@ -20,13 +20,13 @@ function HomeHero() {
               Start Your Journey
             </div>
             <div className="border border-white rounded-full p-3 me-2">
-              <Image src={rocket} width={10} className="items-center"></Image>
+              <Image src={rocket} width={10}></Image>
             </div>
           </button>
         </div>
       </div>
       <div>
-        <Image src={hero} width={600} unoptimized={true}></Image>
+        <Image src={hero} width={600} unoptimized={true} className="hover:scale-105 transition-scale duration-700 ease-in-out"></Image>
       </div>
     </div>
   );
