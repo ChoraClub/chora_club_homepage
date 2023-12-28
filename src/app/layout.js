@@ -29,21 +29,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-<<<<<<< HEAD
-      <body className={poppins.className}>
-        <Providers>
-          <Navbar />
-          {children}
-          <Footer />
-        </Providers>
-=======
       <body className={`${quanty.variable} ${poppins.variable}`}>
         {/* <Providers> */}
         <Navbar />
         {children}
         <Footer />
         {/* </Providers> */}
->>>>>>> cb5b4e14b7264103bb7fb1c1ac4da9c108adebd8
       </body>
     </html>
   );
