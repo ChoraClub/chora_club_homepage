@@ -49,10 +49,10 @@ function HowItWorks() {
         <div className="">
           <div className="text-4xl py-14 font-quanty">How Chora Club Works</div>
           <div className="absolute right-0 top-0">
-            <Image src={illustration} width={400} unoptimized={true}></Image>
+            <Image src={illustration} unoptimized={true} className="w-[24rem] md:w-[19rem] lg:w-[24rem]"></Image>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6 pe-16 font-poppins">
+        <div className="grid grid-cols-3 gap-6 pe-16 md:pe-5 lg:pe-16 font-poppins">
           {content.map((data, index) => (
             <div
               key={index}
@@ -62,7 +62,9 @@ function HowItWorks() {
               className={`${backgrounds[index]} bg-cover border-light-navy-blue border p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
             >
               <div className="text-light-navy-blue font-bold text-xl h-16">
-                {data.title}
+                <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
+                  {data.title}
+                </div>
               </div>
               <div className="pt-2 text-sm">{data.text}</div>
             </div>
