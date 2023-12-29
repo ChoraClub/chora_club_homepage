@@ -25,23 +25,18 @@ function HowItWorks() {
     <div>
       <div className="px-14 py-6 relative">
         <div className="">
-          <div className="text-4xl md:text-3xl lg:text-4xl py-5 md:py-10 lg:py-14 font-quanty">
-            How Chora Club Works
-          </div>
+          <div className="text-4xl py-14 font-quanty">How Chora Club Works</div>
           <div className="absolute right-0 top-0">
-            <Image
-              src={illustration}
-              className="w-[24rem] md:w-[19rem] lg:w-[24rem]"
-            ></Image>
+            <Image src={illustration} width={400}></Image>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-6 pe-16 md:pe-5 lg:pe-16 font-poppins">
+        <div className="grid grid-cols-3 gap-6 pe-16 font-poppins">
           {/* {workingDetails.map((data) => ( */}
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture border border-light-navy-blue p-10 rounded-3xl`}
           >
-            <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
+            <div className="text-light-navy-blue font-bold text-xl h-16">
               Discover DAOs
             </div>
             <div className="pt-2 text-sm">
@@ -55,9 +50,9 @@ function HowItWorks() {
 
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture2 border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture2 border border-light-navy-blue p-10 rounded-3xl`}
           >
-            <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
+            <div className="text-light-navy-blue font-bold text-xl h-16">
               Fast-track Learning with Delegate Dialogues
             </div>
             <div className="pt-2 text-sm">
@@ -70,9 +65,9 @@ function HowItWorks() {
 
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture3 border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture3 border border-light-navy-blue p-10 rounded-3xl`}
           >
-            <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
+            <div className="text-light-navy-blue font-bold text-xl h-16">
               Become an Active Participant
             </div>
             <div className="pt-2 text-sm">
@@ -93,22 +88,22 @@ function HowItWorks() {
 
           {container.map((data, index) => (
             <div key={index} className="">
-              <div className="h-72 md:h-[14.5rem] 2xm:h-[17rem] lg:h-72">
+              <div className="h-72">
                 <div className="flex justify-center">
                   <Image
                     src={data.image}
-                    className="w-[24rem]"
+                    width={400}
                     unoptimized={true}
                   ></Image>
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-xl 2xm:text-2xl lg:text-3xl font-semibold text-light-navy-blue py-3">
+                <div className="text-3xl font-semibold text-light-navy-blue py-3">
                   {data.title}
                 </div>
                 <div className="text-sm pb-5 w-5/6 mx-auto">{data.text}</div>
                 <div>
-                  <button className="p-4 text-light-navy-blue border-light-navy-blue border-2 text-sm font-semibold rounded-full hover:bg-light-navy-blue hover:text-white">
+                  <button className="p-4 border-black border-2 text-sm font-semibold rounded-full hover:bg-black hover:text-white">
                     {data.buttonText}
                   </button>
                 </div>
