@@ -43,12 +43,12 @@ function Faqs() {
 
   const toggleAccordion = (index) => {
     // console.log("Expanded states: ", expandedStates);
-    
+
     const newExpandedStates = expandedStates.map((state, i) =>
       i === index ? !state : false
     );
     // console.log("New Expanded state: ", newExpandedStates);
-    
+
     setExpandedStates(newExpandedStates);
   };
 
@@ -63,14 +63,13 @@ function Faqs() {
           <div
             key={index}
             onClick={() => toggleAccordion(index)}
-            style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07);" }}
+            style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07)" }}
             className="flex flex-col rounded-xl px-6 py-4 my-5 cursor-pointer"
           >
             <div className="flex flex-row items-center">
               <p
-                className={`flex-auto md:text-base lg:text-lg tracking-wide font-medium ${
-                  expandedStates[index] ? "text-light-navy-blue" : ""
-                }`}
+                className={`flex-auto md:text-base lg:text-lg tracking-wide font-medium ${expandedStates[index] ? "text-light-navy-blue" : ""
+                  }`}
               >
                 {faq.title}
               </p>
@@ -79,9 +78,8 @@ function Faqs() {
               </div>
             </div>
             <div
-              className={`transition-max-height duration-700 ease-in-out overflow-hidden ${
-                expandedStates[index] ? "max-h-44" : "max-h-0"
-              }`}
+              className={`transition-max-height duration-700 ease-in-out overflow-hidden ${expandedStates[index] ? "max-h-44" : "max-h-0"
+                }`}
             >
               <p className="py-3 text-sm w-11/12 tracking-wide">{faq.desc}</p>
             </div>
