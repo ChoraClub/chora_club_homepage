@@ -54,11 +54,11 @@ function Faqs() {
 
   return (
     <div className="py-10">
-      <div className="font-quanty text-center text-light-navy-blue text-4xl">
+      <div className="font-quanty text-center text-light-navy-blue text-4xl md:text-3xl lg:text-4xl">
         FAQs
       </div>
 
-      <div className="px-24 font-poppins py-5">
+      <div className="md:px-20 2xm:px-24 font-poppins py-5">
         {faqsData.map((faq, index) => (
           <div
             key={index}
@@ -68,7 +68,7 @@ function Faqs() {
           >
             <div className="flex flex-row items-center">
               <p
-                className={`flex-auto text-lg tracking-wide font-medium ${
+                className={`flex-auto md:text-base lg:text-lg tracking-wide font-medium ${
                   expandedStates[index] ? "text-light-navy-blue" : ""
                 }`}
               >
@@ -80,7 +80,7 @@ function Faqs() {
             </div>
             <div
               className={`transition-max-height duration-700 ease-in-out overflow-hidden ${
-                expandedStates[index] ? "max-h-20" : "max-h-0"
+                expandedStates[index] ? "max-h-44" : "max-h-0"
               }`}
             >
               <p className="py-3 text-sm w-11/12 tracking-wide">{faq.desc}</p>

@@ -5,13 +5,13 @@ import rocket from "@/assets/home/rocket.png";
 
 function HomeHero() {
   return (
-    <div className="flex ps-16 pe-10 py-3 items-center">
-      <div>
-        <div className="font-quanty text-6xl text-light-navy-blue py-3">
+    <div className="grid md:grid-cols-2 lg:grid-cols-5 ps-16 pe-10 py-3 items-center">
+      <div className="lg:col-span-3">
+        <div className="font-quanty text-6xl md:text-[2.5rem] 2xm:text-5xl lg:text-6xl text-light-navy-blue py-3">
           Discover<span className="font-poppins">.</span> Learn
           <span className="font-poppins">.</span> Engage
         </div>
-        <div className="grid grid-cols-2 pb-7 font-poppins">
+        <div className="pb-7 font-poppins lg:w-1/2 md:w-2/3">
           A human-centric approach to unlocking Web3 ecosystems!
         </div>
         <div className="font-poppins">
@@ -25,8 +25,11 @@ function HomeHero() {
           </button>
         </div>
       </div>
-      <div>
-        <Image src={hero} width={600} unoptimized={true} className="hover:scale-105 transition-scale duration-700 ease-in-out"></Image>
+      <div className="lg:col-span-2">
+        <Image
+          src={hero}
+          className="hover:scale-105 transition-scale duration-700 ease-in-out"
+        ></Image>
       </div>
     </div>
   );
