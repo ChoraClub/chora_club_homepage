@@ -23,7 +23,7 @@ function Navbar() {
 
               <li>Connect Button</li>
             </ul>
-            {/* <Button /> */}
+            {/* <ConnectButton className="connectbutton" /> */}
           </div>
         </div>
       </div>

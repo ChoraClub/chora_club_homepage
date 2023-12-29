@@ -1,9 +1,11 @@
 "use client"
-import { useSearchParams } from "next/navigation";
 
-export default function page({params}) {
-  const searchParams = useSearchParams();
-//   const { name, value } = router.query;
+import React from "react";
+// import { useSearchParams } from "next/navigation";
+
+export default function Page({ params }) {
+  // const searchParams = useSearchParams();
+  //   const { name, value } = router.query;
 
   return (
     <div>

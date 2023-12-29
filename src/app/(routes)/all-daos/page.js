@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from 'react';
 import ExploreDAOs from "@/components/Dao/ExploreDAOs";
 import DaoOfficeHours from "@/components/Dao/DaoOfficeHours";
 
-export default function page() {
+export default function Page() {
   const [activePage, setActivePage] = useState("daos");
 
   const handleButtonClick = (page) => {
@@ -14,17 +14,15 @@ export default function page() {
     <div className="p-10">
       <div>
         <button
-          className={`pe-5 py-2 text-xl font-bold  ${
-            activePage === "daos" ? "text-gray-800" : "text-gray-300"
-          } hover:text-gray-800`}
+          className={`pe-5 py-2 text-xl font-bold  ${activePage === "daos" ? "text-gray-800" : "text-gray-300"
+            } hover:text-gray-800`}
           onClick={() => handleButtonClick("daos")}
         >
           All DAOs
         </button>
         <button
-          className={`pe-5 py-2 text-xl font-bold  ${
-            activePage === "office-hours" ? "text-gray-800" : "text-gray-300"
-          } hover:text-gray-800`}
+          className={`pe-5 py-2 text-xl font-bold  ${activePage === "office-hours" ? "text-gray-800" : "text-gray-300"
+            } hover:text-gray-800`}
           onClick={() => handleButtonClick("office-hours")}
         >
           Office Hours

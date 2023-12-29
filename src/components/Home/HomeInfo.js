@@ -22,8 +22,8 @@ function HomeInfo() {
 
         <div>
           <div className="grid grid-cols-3 gap-4 px-36">
-            {blocks.map((details) => (
-              <div className="text-center bg-white rounded-2xl px-4 py-7">
+            {blocks.map((details, index) => (
+              <div key={index} className="text-center bg-white rounded-2xl px-4 py-7">
                 {details.text}
               </div>
             ))}
