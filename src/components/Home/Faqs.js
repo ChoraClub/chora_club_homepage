@@ -68,8 +68,8 @@ function Faqs() {
           >
             <div className="flex flex-row items-center">
               <p
-                className={`flex-auto text-lg tracking-wide ${
-                  expandedStates[index] ? "text-light-navy-blue" : "font-normal"
+                className={`flex-auto text-lg tracking-wide font-medium ${
+                  expandedStates[index] ? "text-light-navy-blue" : ""
                 }`}
               >
                 {faq.title}
