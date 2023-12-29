@@ -5,6 +5,28 @@ import connect from "@/assets/home/connect.png";
 import future from "@/assets/home/future.png";
 
 function HowItWorks() {
+
+  const backgrounds = [
+    "bg-home-working-texture",
+    "bg-home-working-texture2",
+    "bg-home-working-texture3",
+  ];
+
+  const content = [
+    {
+      title: "Discover DAOs",
+      text: "Dive into the vast universe of Web3 ecosystems! Explore and uncover the hidden treasures of diverse DAOs. It's not just discovery; it's a journey into the heart of decentralized possibilities.",
+    },
+    {
+      title: "Fast-track Learning with Delegate Dialogues",
+      text: "Skip the learning curve! Book lively sessions with our seasoned Delegates. Get ready for a knowledge boost tailored to your interests. Because why settle for ordinary when you can learn from the extraordinary.",
+    },
+    {
+      title: "Become an Active Participant",
+      text: "Be more than a spectator—be an active player! Attend Delegate Office Hours regularly. It's not just about showing up; it's about actively participating, asking questions, engaging with industry leaders and becoming an integral part of the ecosystem.",
+    },
+  ];
+
   const container = [
     {
       image: connect,
@@ -31,56 +53,22 @@ function HowItWorks() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-6 pe-16 font-poppins">
-          {/* {workingDetails.map((data) => ( */}
-          <div
-            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture bg-cover border  p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
-          >
-            <div className="text-light-navy-blue font-bold text-xl h-16">
-              Discover DAOs
+          {content.map((data, index) => (
+            <div
+              key={index}
+              style={{
+                boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11)",
+              }}
+              className={`${backgrounds[index]} bg-cover border-light-navy-blue border p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            >
+              <div className="text-light-navy-blue font-bold text-xl h-16">
+                {data.title}
+              </div>
+              <div className="pt-2 text-sm">{data.text}</div>
             </div>
-            <div className="pt-2 text-sm">
-              Dive into the vast universe of Web3 ecosystems! Explore and
-              uncover the hidden treasures of diverse DAOs. It's not just
-              discovery; it's a journey into the heart of decentralized
-              possibilities.
-            </div>
-          </div>
-          {/* ))} */}
-
-          <div
-            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture2 bg-cover border p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
-          >
-            <div className="text-light-navy-blue font-bold text-xl h-16">
-              Fast-track Learning with Delegate Dialogues
-            </div>
-            <div className="pt-2 text-sm">
-              Skip the learning curve! Book lively sessions with our seasoned
-              Delegates. Get ready for a knowledge boost tailored to your
-              interests. Because why settle for ordinary when you can learn from
-              the extraordinary
-            </div>
-          </div>
-
-          <div
-            style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture3 bg-cover border  p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
-          >
-            <div className="text-light-navy-blue font-bold text-xl h-16">
-              Become an Active Participant
-            </div>
-            <div className="pt-2 text-sm">
-              Be more than a spectator—be an active player! Attend Delegate
-              Office Hours regularly. It's not just about showing up; it's about
-              actively participating, asking questions, engaging with industry
-              leaders and becoming an integral part of the ecosystem.
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* Container for platform features */}
 
       <div className="px-16 py-10">
         <div className="grid grid-cols-2 gap-8 font-poppins">
