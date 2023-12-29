@@ -49,7 +49,7 @@ function HowItWorks() {
         <div className="">
           <div className="text-4xl py-14 font-quanty">How Chora Club Works</div>
           <div className="absolute right-0 top-0">
-            <Image src={illustration} width={400}></Image>
+            <Image src={illustration} width={400} unoptimized={true}></Image>
           </div>
         </div>
         <div className="grid grid-cols-3 gap-6 pe-16 font-poppins">

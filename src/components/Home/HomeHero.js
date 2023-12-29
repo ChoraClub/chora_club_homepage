@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import hero from "@/assets/home/hero-img3.png";
+import hero from "@/assets/home/hero-img2.png";
 import rocket from "@/assets/home/rocket.png";
 
 function HomeHero() {
@@ -29,6 +29,9 @@ function HomeHero() {
         <Image
           src={hero}
           className="hover:scale-105 transition-scale duration-700 ease-in-out"
+          unoptimized={true}
+          // priority
+        quality={100}
         ></Image>
       </div>
     </div>
