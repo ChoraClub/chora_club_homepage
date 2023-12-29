@@ -39,7 +39,7 @@ function HowItWorks() {
           {/* {workingDetails.map((data) => ( */}
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture bg-cover border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
               Discover DAOs
@@ -55,7 +55,7 @@ function HowItWorks() {
 
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture2 border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture2 bg-cover border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
               Fast-track Learning with Delegate Dialogues
@@ -70,7 +70,7 @@ function HowItWorks() {
 
           <div
             style={{ boxShadow: "0px 0px 23.8px 0px rgba(0, 0, 0, 0.11);" }}
-            className={`bg-home-working-texture3 border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
+            className={`bg-home-working-texture3 bg-cover border border-light-navy-blue p-10 md:p-3 2xm:p-5 lg:p-8 xl:p-10 rounded-3xl`}
           >
             <div className="text-light-navy-blue font-bold text-xl md:text-base lg:text-lg xl:text-xl md:h-16 lg:h-[4.8rem] min-[1095px]:h-16">
               Become an Active Participant
@@ -97,7 +97,7 @@ function HowItWorks() {
                 <div className="flex justify-center">
                   <Image
                     src={data.image}
-                    className="w-[24rem]"
+                    className="w-[24rem] hover:scale-105 transition-scale duration-700 ease-in-out"
                     unoptimized={true}
                   ></Image>
                 </div>
