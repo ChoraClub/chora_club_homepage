@@ -22,9 +22,17 @@ function Footer() {
         </div>
 
         <div className="flex justify-center pt-6 gap-x-12 pb-4">
-          <Image src={discord} width={40} className="cursor-pointer"></Image>
-          <Image src={twitter} width={40} className="cursor-pointer"></Image>
-          <Image src={telegram} width={40} className="cursor-pointer"></Image>
+          <Link href="https://discord.gg/mFyeq34cGM" target="_blank">
+            <Image src={discord} width={40} className="cursor-pointer"></Image>
+          </Link>
+
+          <Link href="https://twitter.com/ChoraClub" target="_blank">
+            <Image src={twitter} width={40} className="cursor-pointer"></Image>
+          </Link>
+
+          <Link href="https://t.me/choraclub" target="_blank">
+            <Image src={telegram} width={40} className="cursor-pointer"></Image>
+          </Link>
         </div>
       </div>
     </div>

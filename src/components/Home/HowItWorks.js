@@ -82,7 +82,7 @@ function HowItWorks() {
 
           {container.map((data, index) => (
             <div key={index} className="">
-              <div className="h-72">
+              <div className="h-72 md:h-[14.5rem] 2xm:h-[17rem] lg:h-72">
                 <div className="flex justify-center">
                   <Image
                     src={data.image}
