@@ -74,7 +74,7 @@ function Faqs() {
                 {faq.title}
               </p>
               <div className="border-2 border-light-navy-blue rounded-full p-2">
-                <Image className={`flex-none w-3 ${expandedStates[index] ? "-rotate-180 transition-rotate duration-500 ease-in-out" : "transition-rotate duration-500 ease-in-out"}`} src={arrow} alt="arrow down" />
+                <Image className={`flex-none w-3 ${expandedStates[index] ? "-rotate-180 transition-rotate duration-500 ease-in-out" : "transition-rotate duration-500 ease-in-out"}`} src={arrow} alt="arrow-down" />
               </div>
             </div>
             <div

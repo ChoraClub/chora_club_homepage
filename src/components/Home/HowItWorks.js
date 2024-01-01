@@ -52,6 +52,7 @@ function HowItWorks() {
           <div className="absolute right-0 top-0">
             <Image
               src={illustration}
+              alt="image"
               priority={true}
               className="w-96 md:w-72 lg:w-96"
             ></Image>
@@ -86,6 +87,7 @@ function HowItWorks() {
                 <div className="flex justify-center">
                   <Image
                     src={data.image}
+                    alt="image"
                     className="w-[24rem] hover:scale-105 transition-scale duration-700 ease-in-out"
                     priority={true}
                   ></Image>

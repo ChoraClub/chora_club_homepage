@@ -11,7 +11,7 @@ function Footer() {
     <div className="bg-light-navy-blue p-7 font-poppins">
       <div>
         <Link href="/" className="flex justify-center">
-          <Image src={footer_logo} width={180}></Image>
+          <Image src={footer_logo} width={180} alt="logo"></Image>
         </Link>
         <div className="pt-7 pb-3">
           <hr />
@@ -23,15 +23,15 @@ function Footer() {
 
         <div className="flex justify-center pt-6 gap-x-12 pb-4">
           <Link href="https://discord.gg/mFyeq34cGM" target="_blank">
-            <Image src={discord} width={40} className="cursor-pointer"></Image>
+            <Image src={discord} width={40} className="cursor-pointer" alt="discord"></Image>
           </Link>
 
           <Link href="https://twitter.com/ChoraClub" target="_blank">
-            <Image src={twitter} width={40} className="cursor-pointer"></Image>
+            <Image src={twitter} width={40} className="cursor-pointer" alt="twitter"></Image>
           </Link>
 
           <Link href="https://t.me/choraclub" target="_blank">
-            <Image src={telegram} width={40} className="cursor-pointer"></Image>
+            <Image src={telegram} width={40} className="cursor-pointer" alt="telegram"></Image>
           </Link>
         </div>
       </div>
