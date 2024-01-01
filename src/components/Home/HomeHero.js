@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import React, { lazy } from "react";
 import hero from "@/assets/home/hero-img2.png";
 import rocket from "@/assets/home/rocket.png";
 
@@ -29,9 +29,9 @@ function HomeHero() {
         <Image
           src={hero}
           className="hover:scale-105 transition-scale duration-700 ease-in-out"
-          unoptimized={true}
-          priority={true}
+          // priority={true}
           quality={100}
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         ></Image>
       </div>
     </div>
