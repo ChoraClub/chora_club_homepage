@@ -21,7 +21,7 @@ function Navbar() {
         <div className="px-4 h-full">
           <div className="flex justify-between items-center h-full">
             <Link href="/" className="ps-10" onClick={handleSmallerScreenNav}>
-              <Image src={logo} alt="Logo" width={180}></Image>
+              <Image src={logo} alt="logo" width={180}></Image>
             </Link>
 
             <ul className="hidden md:flex gap-x-6 text-white">

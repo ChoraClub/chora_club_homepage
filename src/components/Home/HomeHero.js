@@ -20,7 +20,7 @@ function HomeHero() {
               Start Your Journey
             </div>
             <div className="border border-white rounded-full p-3 me-2">
-              <Image src={rocket} width={10}></Image>
+              <Image src={rocket} width={10} alt="rocket"></Image>
             </div>
           </button>
         </div>
@@ -28,7 +28,7 @@ function HomeHero() {
       <div className="lg:col-span-2">
         <Image
           src={hero}
-          className="hover:scale-105 transition-scale duration-700 ease-in-out"
+          alt="image"
           unoptimized={true}
           priority={true}
           quality={100}
