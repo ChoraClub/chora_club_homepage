@@ -30,8 +30,8 @@ function HomeHero() {
           src={hero}
           className="hover:scale-105 transition-scale duration-700 ease-in-out"
           unoptimized={true}
-          // priority
-        quality={100}
+          priority={true}
+          quality={100}
         ></Image>
       </div>
     </div>

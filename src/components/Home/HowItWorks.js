@@ -53,6 +53,7 @@ function HowItWorks() {
             <Image
               src={illustration}
               unoptimized={true}
+              priority={true}
               className="w-96 md:w-72 lg:w-96"
             ></Image>
           </div>
@@ -88,6 +89,7 @@ function HowItWorks() {
                     src={data.image}
                     className="w-[24rem] hover:scale-105 transition-scale duration-700 ease-in-out"
                     unoptimized={true}
+                    priority={true}
                   ></Image>
                 </div>
               </div>
