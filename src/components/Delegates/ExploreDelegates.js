@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import arbImage from "../../assets/arbitrum.jpg";
+import arbImage from "../../assets/daos/arbitrum.jpg";
 import Image from "next/image";
 
 export default function Delegates() {
