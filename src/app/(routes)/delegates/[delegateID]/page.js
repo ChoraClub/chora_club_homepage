@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import React from 'react';
-import delegateLogo from "../../../../assets/arbitrum.jpg"
+import delegateLogo from "../../../../assets/daos/arbitrum.jpg"
 import Image from 'next/image';
 
 export default function IndividualDelegate({ params }) {
