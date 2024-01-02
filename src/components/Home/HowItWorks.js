@@ -54,9 +54,10 @@ function HowItWorks() {
               src={illustration}
               alt="image"
               priority={true}
+              loading="eager"
               className="w-96 md:w-72 lg:w-96"
               quality={100}
-              // sizes="(min-width: 1040px) 384px, (min-width: 780px) 288px, (min-width: 420px) 384px, calc(84vw + 48px)"
+              sizes="(min-width: 1040px) 384px, (min-width: 780px) 288px, (min-width: 420px) 384px, calc(84vw + 48px)"
             ></Image>
           </div>
         </div>
@@ -92,8 +93,9 @@ function HowItWorks() {
                     alt="image"
                     className="w-[24rem] hover:scale-105 transition-scale duration-700 ease-in-out"
                     priority={true}
+                    loading="eager"
                     quality={100}
-                    // sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
+                    sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
                   ></Image>
                 </div>
               </div>
