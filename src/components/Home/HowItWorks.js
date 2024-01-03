@@ -55,7 +55,7 @@ function HowItWorks() {
               alt="image"
               priority={true}
               loading="eager"
-              className="w-96 md:w-72 lg:w-96"
+              className="w-96 sm:w-50 md:w-72 lg:w-96"
               quality={100}
               sizes="(min-width: 1040px) 384px, (min-width: 780px) 288px, (min-width: 420px) 384px, calc(84vw + 48px)"
             ></Image>
