@@ -33,7 +33,7 @@ function HomeHero() {
           priority={true}
           quality={100}
         // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        // sizes="(min-width: 1040px) calc(40vw - 42px), (min-width: 780px) calc(50vw - 52px), (min-width: 380px) calc(100vw - 104px), calc(5vw + 238px)"
+        sizes="(min-width: 1040px) calc(40vw - 42px), (min-width: 780px) calc(50vw - 52px), (min-width: 380px) calc(100vw - 104px), calc(5vw + 238px)"
         ></Image>
       </div>
     </div>

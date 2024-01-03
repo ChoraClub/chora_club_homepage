@@ -25,10 +25,10 @@ function ExploreDAOs() {
   const handleClick = (name, img) => {
     const formattedDaoName = name.replace(/\s+/g, "-").toLowerCase();
     router.push(`/all-daos/${formattedDaoName}`);
-    console.log("Image data: ", img);
+    // console.log("Image data: ", img);
 
     const formattedImage = JSON.stringify(img);
-    console.log("Formatted Image data: ", formattedImage);
+    // console.log("Formatted Image data: ", formattedImage);
 
     localStorage.setItem(formattedDaoName, formattedImage);
   };

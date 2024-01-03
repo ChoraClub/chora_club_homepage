@@ -1,15 +1,9 @@
-import Faqs from "@/components/Home/Faqs";
-import HomeHero from "@/components/Home/HomeHero";
-import HomeInfo from "@/components/Home/HomeInfo";
-import HowItWorks from "@/components/Home/HowItWorks";
+import HomePage from "@/components/Home/HomePage";
 
 export default function Home() {
   return (
     <main>
-      <HomeHero />
-      <HomeInfo />
-      <HowItWorks />
-      <Faqs />
+      <HomePage />
     </main>
   );
 }
