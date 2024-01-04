@@ -13,7 +13,7 @@ function Footer() {
         <Link href="/" className="flex justify-center">
           <Image
             src={footer_logo}
-            className="w-36 sm:w-40 md:w-44"
+            className="w-40 md:w-44"
             alt="logo"
           ></Image>
         </Link>
