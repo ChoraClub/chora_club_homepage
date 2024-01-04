@@ -6,8 +6,11 @@ import { useRouter } from "next/navigation";
 import arbImage from "../../assets/daos/arbitrum.jpg";
 import Image from "next/image";
 
-export default function Delegates() {
+import { usePathname } from "next/navigation";
+
+export default function Delegates({ params }) {
   const router = useRouter();
+  const pathname = usePathname();
 
   // Sample delegate data for demonstration
   const initialDelegates = [
@@ -52,20 +55,19 @@ export default function Delegates() {
 
   return (
     <div>
+      {/* <div>{pathname}</div> */}
       <div className="m-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {initialDelegates.map((delegate) => (
           <div
             key={delegate.id}
             className="relative bg-white p-4 rounded-md shadow-md cursor-pointer transition-transform transform hover:scale-105"
+            onClick={() => {
+              router.push(`${pathname}/${delegate.id}`);
+            }}
           >
             <div className="absolute inset-0 bg-pink-300 opacity-10 rounded-md"></div>
             {/* <Link href={`/delegates/${delegate.id}`} passHref> */}
-            <div
-              className="flex items-center relative z-10"
-              onClick={() => {
-                router.push(`/delegates/${delegate.id}`);
-              }}
-            >
+            <div className="flex items-center relative z-10">
               <div className="relative w-12 h-12 mb-2 overflow-hidden rounded-full">
                 {/* Adjusted the size of the image */}
                 <Image src={delegate.image} alt={delegate.name} />
