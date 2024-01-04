@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import arbImage from "../../assets/daos/arbitrum.jpg";
+import arbImage from "@/assets/daos/arbitrum.jpg";
 import Image from "next/image";
 
-export default function Delegates() {
+export default function Delegates({ params }) {
   const router = useRouter();
+
+  console.log(params)
 
   // Sample delegate data for demonstration
   const initialDelegates = [
@@ -63,7 +65,7 @@ export default function Delegates() {
             <div
               className="flex items-center relative z-10"
               onClick={() => {
-                router.push(`/delegates/${delegate.id}`);
+                router.push(`/all-daos/${delegate.id}`);
               }}
             >
               <div className="relative w-12 h-12 mb-2 overflow-hidden rounded-full">

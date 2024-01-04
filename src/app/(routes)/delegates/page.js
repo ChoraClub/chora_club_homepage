@@ -15,17 +15,15 @@ export default function DelegatesMain() {
     <div className="p-10">
       <div className="">
         <button
-          className={`inline-flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 ${
-            activePage === "delegates" ? "bg-gray-300" : "bg-gray-200"
-          } hover:bg-gray-300 mr-2`}
+          className={`inline-flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 ${activePage === "delegates" ? "bg-gray-300" : "bg-gray-200"
+            } hover:bg-gray-300 mr-2`}
           onClick={() => handleButtonClick("delegates")}
         >
           Delegates
         </button>
         <button
-          className={`inline-flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 ${
-            activePage === "officeHours" ? "bg-gray-300" : "bg-gray-200"
-          } hover:bg-gray-300`}
+          className={`inline-flex items-center px-4 py-2 border rounded text-sm font-medium text-gray-700 ${activePage === "officeHours" ? "bg-gray-300" : "bg-gray-200"
+            } hover:bg-gray-300`}
           onClick={() => handleButtonClick("officeHours")}
         >
           Office Hours
