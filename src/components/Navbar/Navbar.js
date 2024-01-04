@@ -17,11 +17,11 @@ function Navbar() {
   return (
     <header className="font-poppins">
       {/* <ConnectButton className="connectbutton" /> */}
-      <div className="m-3 h-16 bg-black sticky top-0 rounded-full">
-        <div className="px-4 h-full">
+      <div className="m-3 bg-black sticky top-0 rounded-full">
+        <div className="px-4 py-3 xs:py-4 sm:py-5 md:py-6">
           <div className="flex justify-between items-center h-full">
-            <Link href="/" className="ps-10" onClick={handleSmallerScreenNav}>
-              <Image src={logo} alt="logo" width={180}></Image>
+            <Link href="/" className="ps-2 xs:ps-4 sm:ps-6 md:ps-8" onClick={handleSmallerScreenNav}>
+              <Image src={logo} alt="logo" className="w-36 md:w-44"></Image>
             </Link>
 
             <ul className="hidden md:flex gap-x-6 text-white">
@@ -37,7 +37,7 @@ function Navbar() {
 
             <div
               onClick={handleSmallerScreenNav}
-              className="flex md:hidden text-white"
+              className="flex md:hidden text-white pe-2"
             >
               {menuIcon ? (
                 <AiOutlineClose size={25} className="" />

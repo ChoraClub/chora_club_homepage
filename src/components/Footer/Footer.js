@@ -11,27 +11,43 @@ function Footer() {
     <div className="bg-light-navy-blue p-7 font-poppins">
       <div>
         <Link href="/" className="flex justify-center">
-          <Image src={footer_logo} width={180} alt="logo"></Image>
+          <Image
+            src={footer_logo}
+            className="w-36 sm:w-40 md:w-44"
+            alt="logo"
+          ></Image>
         </Link>
-        <div className="pt-7 pb-3">
+        <div className="pt-5 xs:pt-7 pb-3">
           <hr />
         </div>
 
-        <div className="flex text-white justify-center text-xs">
+        <div className=" text-white text-center text-xs">
           Copyright © 2023 Chora Club | All rights reserved
         </div>
 
-        <div className="flex justify-center pt-6 gap-x-10 pb-4">
+        <div className="flex justify-center pt-6 gap-x-8 xs:gap-x-9 sm:gap-x-10 pb-4">
           <Link href="https://discord.gg/mFyeq34cGM" target="_blank">
-            <Image src={discord} width={40} className="cursor-pointer" alt="discord"></Image>
+            <Image
+              src={discord}
+              className="w-9 xs:w-10 cursor-pointer"
+              alt="discord"
+            ></Image>
           </Link>
 
           <Link href="https://twitter.com/ChoraClub" target="_blank">
-            <Image src={twitter} width={40} className="cursor-pointer" alt="twitter"></Image>
+            <Image
+              src={twitter}
+              className="w-9 xs:w-10 cursor-pointer"
+              alt="twitter"
+            ></Image>
           </Link>
 
           <Link href="https://t.me/choraclub" target="_blank">
-            <Image src={telegram} width={40} className="cursor-pointer" alt="telegram"></Image>
+            <Image
+              src={telegram}
+              className="w-9 xs:w-10 cursor-pointer"
+              alt="telegram"
+            ></Image>
           </Link>
         </div>
       </div>
