@@ -60,7 +60,7 @@ function HowItWorks() {
             ></Image>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-10 xs:px-6 md:grid-cols-3 md:gap-6 md:px-0 md:pe-5 lg:pe-16 font-poppins">
+        <div className="grid grid-cols-1 gap-9 xs:px-6 md:grid-cols-3 md:gap-6 md:px-0 md:pe-5 lg:pe-16 font-poppins">
           {content.map((data, index) => (
             <div
               key={index}
@@ -80,7 +80,7 @@ function HowItWorks() {
       </div>
 
       <div className="px-8 py-8 xs:px-16 xs:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 md:gap-8 font-poppins">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-8 font-poppins">
           {/* Containers mapping*/}
 
           {container.map((data, index) => (

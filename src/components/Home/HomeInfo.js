@@ -21,7 +21,7 @@ function HomeInfo() {
         </div>
 
         <div>
-          <div className="grid grid-cols-2 gap-4 pb-5 xs:gap-7 xs:grid-cols-2 sm:px-4 md:grid-cols-3 md:pb-0  md:gap-4 md:px-5 2xm:px-14 lg:px-24 xl:px-32">
+          <div className="grid grid-cols-2 gap-4 pb-5 xs:gap-7 sm:px-4 md:grid-cols-3 md:pb-0  md:gap-4 md:px-5 2xm:px-14 lg:px-24 xl:px-32">
             {blocks.map((details, index) => (
               <div
                 key={index}

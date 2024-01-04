@@ -63,19 +63,19 @@ function Faqs() {
             key={index}
             onClick={() => toggleAccordion(index)}
             style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07)" }}
-            className="flex flex-col rounded-xl px-4 py-2 my-3 xs:px-5 xs:py-3 xs:my-4 sm:px-6 sm:py-4 sm:my-5 cursor-pointer"
+            className="flex flex-col rounded-xl px-4 py-[0.6rem] my-3 xs:px-5 xs:py-3 xs:my-4 sm:px-6 sm:py-4 sm:my-5 cursor-pointer"
           >
             <div className="flex flex-row items-center">
               <p
-                className={`flex-auto text-[0.8rem] xs:text-sm sm:text-base lg:text-lg tracking-wide font-medium ${
+                className={`flex-auto text-[0.8rem] pe-2 xs:pe-0 xs:text-sm sm:text-base lg:text-lg tracking-wide font-medium ${
                   expandedStates[index] ? "text-light-navy-blue" : ""
                 }`}
               >
                 {faq.title}
               </p>
-              <div className="border-[1.5px] sm:border-2 border-light-navy-blue rounded-full p-1 sm:p-2">
+              <div className="border-[1.5px] sm:border-2 border-light-navy-blue rounded-full p-[0.3rem] sm:p-2">
                 <Image
-                  className={`flex-none w-2 sm:w-3 ${
+                  className={`flex-none w-[0.65rem] sm:w-3 ${
                     expandedStates[index]
                       ? "-rotate-180 transition-rotate duration-500 ease-in-out"
                       : "transition-rotate duration-500 ease-in-out"
