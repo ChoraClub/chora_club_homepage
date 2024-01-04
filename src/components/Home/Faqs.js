@@ -5,7 +5,6 @@ import arrow from "@/assets/home/arrow1.png";
 import Image from "next/image";
 
 function Faqs() {
-
   const faqsData = [
     {
       title: "What is Chora Club?",
@@ -53,35 +52,47 @@ function Faqs() {
   };
 
   return (
-    <div className="py-10">
-      <div className="font-quanty text-center text-light-navy-blue text-4xl md:text-3xl lg:text-4xl">
+    <div className="py-5 xs:py-8 sm:py-10">
+      <div className="font-quanty text-center text-light-navy-blue text-2xl sm:text-3xl lg:text-4xl">
         FAQs
       </div>
 
-      <div className="md:px-20 2xm:px-24 font-poppins py-5">
+      <div className="px-8 py-3 sm:py-5 sm:px-16 md:px-20 2xm:px-24 font-poppins">
         {faqsData.map((faq, index) => (
           <div
             key={index}
             onClick={() => toggleAccordion(index)}
             style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07)" }}
-            className="flex flex-col rounded-xl px-6 py-4 my-5 cursor-pointer"
+            className="flex flex-col rounded-xl px-4 py-2 my-3 xs:px-5 xs:py-3 xs:my-4 sm:px-6 sm:py-4 sm:my-5 cursor-pointer"
           >
             <div className="flex flex-row items-center">
               <p
-                className={`flex-auto md:text-base lg:text-lg tracking-wide font-medium ${expandedStates[index] ? "text-light-navy-blue" : ""
-                  }`}
+                className={`flex-auto text-[0.8rem] xs:text-sm sm:text-base lg:text-lg tracking-wide font-medium ${
+                  expandedStates[index] ? "text-light-navy-blue" : ""
+                }`}
               >
                 {faq.title}
               </p>
-              <div className="border-2 border-light-navy-blue rounded-full p-2">
-                <Image className={`flex-none w-3 ${expandedStates[index] ? "-rotate-180 transition-rotate duration-500 ease-in-out" : "transition-rotate duration-500 ease-in-out"}`} src={arrow} alt="arrow-down" />
+              <div className="border-[1.5px] sm:border-2 border-light-navy-blue rounded-full p-1 sm:p-2">
+                <Image
+                  className={`flex-none w-2 sm:w-3 ${
+                    expandedStates[index]
+                      ? "-rotate-180 transition-rotate duration-500 ease-in-out"
+                      : "transition-rotate duration-500 ease-in-out"
+                  }`}
+                  src={arrow}
+                  alt="arrow-down"
+                />
               </div>
             </div>
             <div
-              className={`transition-max-height duration-700 ease-in-out overflow-hidden ${expandedStates[index] ? "max-h-44" : "max-h-0"
-                }`}
+              className={`transition-max-height duration-700 ease-in-out overflow-hidden ${
+                expandedStates[index] ? "max-h-56" : "max-h-0"
+              }`}
             >
-              <p className="py-3 text-sm w-11/12 tracking-wide">{faq.desc}</p>
+              <p className="py-3 text-xs sm:text-sm w-11/12 tracking-wide">
+                {faq.desc}
+              </p>
             </div>
           </div>
         ))}
