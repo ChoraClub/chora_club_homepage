@@ -9,6 +9,8 @@ export default function IndividualDelegate({ params }) {
   // const searchParams = useSearchParams();
   // const { id } = router.query;
 
+  console.log(params)
+
   const votingInfo = {
     "Proposals voted": 100,
     "For / Against / Abstain": { for: 100, against: 0, abstain: 0 },
@@ -38,6 +40,8 @@ export default function IndividualDelegate({ params }) {
 
           {/* Name on the right side */}
           <h2 className="text-lg font-bold text-blue-600">
+            {params.daoDelegates}
+            <span> </span>
             {params.delegateID}
           </h2>
           {/* <h2 className="text-lg font-bold text-blue-600">{delegateName}</h2> */}
