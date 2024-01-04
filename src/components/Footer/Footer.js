@@ -21,7 +21,7 @@ function Footer() {
           Copyright © 2023 Chora Club | All rights reserved
         </div>
 
-        <div className="flex justify-center pt-6 gap-x-12 pb-4">
+        <div className="flex justify-center pt-6 gap-x-10 pb-4">
           <Link href="https://discord.gg/mFyeq34cGM" target="_blank">
             <Image src={discord} width={40} className="cursor-pointer" alt="discord"></Image>
           </Link>

@@ -49,13 +49,12 @@ function HowItWorks() {
           <div className="text-4xl md:text-3xl lg:text-4xl py-5 md:py-10 lg:py-14 font-quanty">
             How Chora Club Works
           </div>
-          <div className="absolute right-0 top-0">
+          <div className="absolute right-0 top-0 w-96 md:w-72 lg:w-96">
             <Image
               src={illustration}
               alt="image"
               priority={true}
-              loading="eager"
-              className="w-96 sm:w-50 md:w-72 lg:w-96"
+              // className=""
               quality={100}
               sizes="(min-width: 1040px) 384px, (min-width: 780px) 288px, (min-width: 420px) 384px, calc(84vw + 48px)"
             ></Image>
@@ -88,33 +87,35 @@ function HowItWorks() {
             <div key={index} className="">
               <div className="h-72 md:h-[14.5rem] 2xm:h-[17rem] lg:h-72">
                 <div className="flex justify-center">
-                  <Image
-                    src={data.image}
-                    alt="image"
-                    className="w-[24rem] hover:scale-105 transition-scale duration-700 ease-in-out"
-                    priority={true}
-                    loading="eager"
-                    quality={100}
-                    sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
-                  ></Image>
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-xl 2xm:text-2xl lg:text-3xl font-semibold text-light-navy-blue py-3">
-                  {data.title}
-                </div>
-                <div className="text-sm pb-5 w-5/6 mx-auto">{data.text}</div>
-                <div>
-                  <button className="p-4 border-black border-2 text-sm font-semibold rounded-full hover:bg-black hover:text-white">
-                    {data.buttonText}
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+                  <div className="w-[24rem]">
+                    <Image
+                      src={data.image}
+                      alt="image"
+                      className=" hover:scale-105 transition-scale duration-700 ease-in-out"
+                      priority={true}
+                      quality={100}
+                      // sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
+                    ></Image>
+                  </div>
+                </div >
+              </div >
+    <div className="text-center">
+      <div className="text-3xl md:text-xl 2xm:text-2xl lg:text-3xl font-semibold text-light-navy-blue py-3">
+        {data.title}
+      </div>
+      <div className="text-sm pb-5 w-5/6 mx-auto">{data.text}</div>
+      <div>
+        <button className="p-4 border-black border-2 text-sm font-semibold rounded-full hover:bg-black hover:text-white">
+          {data.buttonText}
+        </button>
       </div>
     </div>
+            </div >
+          ))
+}
+        </div >
+      </div >
+    </div >
   );
 }
 
