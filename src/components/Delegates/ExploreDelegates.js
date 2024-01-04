@@ -11,27 +11,28 @@ export default function Delegates({ params }) {
   const router = useRouter();
   const pathname = usePathname();
 
-  console.log(params)
+  // console.log("params", params)
+  // console.log(pathname)
 
   // Sample delegate data for demonstration
   const initialDelegates = [
     {
       id: 1,
-      name: "Delegate 1",
+      name: params.daoDelegates + " " + 1,
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores possimus, nobis deleniti numquam, unde placeat quisquam similique perspiciatis in fugiat sapiente aspernatur maxime sunt modi praesentium ex repellendus iure voluptates.",
       image: arbImage,
     },
     {
       id: 2,
-      name: "Delegate 2",
+      name: params.daoDelegates + " " + 2,
       description:
         "consectetur adipisicing elit. Maiores possimus, nobis deleniti numquam, unde placeat quisquam similique perspiciatis in fugiat sapiente aspernatur maxime sunt modi praesentium ex repellendus iure voluptates.",
       image: arbImage,
     },
     {
       id: 3,
-      name: "Delegate 3",
+      name: params.daoDelegates + " " + 3,
       description:
         "sit amet consectetur adipisicing elit. Maiores possimus, nobis deleniti numquam, unde placeat quisquam similique perspiciatis in fugiat sapiente aspernatur maxime sunt modi praesentium ex repellendus iure voluptates.",
       image: arbImage,
@@ -49,10 +50,10 @@ export default function Delegates({ params }) {
     );
   };
 
-  const transferData = (delegateData) => {
-    console.log(delegateData);
-    // router.push(`/delegates/${delegateData.id}`, { query: { data: delegateData } });
-  };
+  // const transferData = (delegateData) => {
+  //   console.log(delegateData);
+  //   // router.push(`/delegates/${delegateData.id}`, { query: { data: delegateData } });
+  // };
 
   return (
     <div>
@@ -63,7 +64,8 @@ export default function Delegates({ params }) {
             key={delegate.id}
             className="relative bg-white p-4 rounded-md shadow-md cursor-pointer transition-transform transform hover:scale-105"
             onClick={() => {
-              router.push(`${pathname}/${delegate.id}`);
+              router.push(`/all-daos/${params.daoDelegates}/${delegate.id}`);
+              // router.push(`${pathname}/${delegate.id}`);
             }}
           >
             <div className="absolute inset-0 bg-pink-300 opacity-10 rounded-md"></div>

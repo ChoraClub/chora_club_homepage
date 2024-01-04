@@ -53,7 +53,7 @@ function Sidebar() {
   return (
     <div className="py-4">
       <div className="flex flex-col items-center gap-y-3">
-        {dao_info.map((dao) => {
+        {dao_info.map((dao, index) => {
           console.log("Daos: ", dao.name);
           const daoName = dao.name.toLowerCase();
           const src = storedSrc[daoName];
@@ -61,6 +61,7 @@ function Sidebar() {
 
           return (
             <a
+              key={index}
               data-tooltip-id="my-tooltip"
               // data-tooltip-html="<Image src={close} alt='Image'/>"
               // data-tooltip-html="<div style='background-color: red; padding: 8px; border-radius: 8px' onclick='handleTooltip(${dao.name})'>Leave</div>"

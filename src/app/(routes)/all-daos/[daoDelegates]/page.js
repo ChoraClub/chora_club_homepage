@@ -7,6 +7,9 @@ import OfficeHours_Delegate from "@/components/Delegates/OfficeHours_Delegate";
 
 export default function Page({ params }) {
   // const searchParams = useSearchParams();
+  // console.log("searchParams", searchParams)
+
+  // console.log("params", params)
   //   const { name, value } = router.query;
 
   const [activePage, setActivePage] = useState("delegates");
@@ -33,7 +36,7 @@ export default function Page({ params }) {
           Office Hours
         </button>
 
-        {activePage === "delegates" && <Delegates />}
+        {activePage === "delegates" && <Delegates params={params} />}
         {activePage === "officeHours" && <OfficeHours_Delegate />}
       </div>
     </div>
