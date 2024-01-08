@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import op_logo from "../../assets/daos/op.png";
 import arbi_logo from "@/assets/daos/arbitrum.jpg";
 import comp_logo from "@/assets/daos/comp.png";
@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-function ExploreDAOs() {
+function ExploreDAOs({ onAddTask }) {
   const dao_info = [
     { name: "Optimism", value: "10876", img: op_logo },
     { name: "Arbitrum", value: "20569", img: arbi_logo },
@@ -20,17 +20,20 @@ function ExploreDAOs() {
   ];
 
   const [daoInfo, setDaoInfo] = useState(dao_info);
+  // const [sessionName, setSessionName] = useState({});
   const router = useRouter();
 
   const handleClick = (name, img) => {
     const formattedDaoName = name.replace(/\s+/g, "-").toLowerCase();
+    const savedData = JSON.parse(localStorage.getItem("clickedDaoName")) || {};
+    // console.log("saved data: ", savedData);
+
+    localStorage.setItem(
+      "clickedDaoName",
+      JSON.stringify({ ...savedData, [formattedDaoName]: name })
+    );
+
     router.push(`/all-daos/${formattedDaoName}`);
-    // console.log("Image data: ", img);
-
-    const formattedImage = JSON.stringify(img);
-    // console.log("Formatted Image data: ", formattedImage);
-
-    localStorage.setItem(formattedDaoName, formattedImage);
   };
 
   return (
@@ -39,7 +42,7 @@ function ExploreDAOs() {
         <div
           key={daos.name}
           className="p-5 border rounded-2xl cursor-pointer hover:border-black"
-          onClick={() => handleClick(daos.name, daos.img)}
+          onClick={() => handleClick(daos.name)}
         >
           <div className="flex justify-center">
             <Image

@@ -6,85 +6,63 @@ import Image from "next/image";
 import close from "@/assets/sidebar/cancel.png";
 import { Tooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
+import { iconData } from "../../../config";
 
-function Sidebar() {
-  const [storedSrc, setStoredSrc] = useState({});
-  const [isOpen, setIsOpen] = useState(false);
-
-  const dao_info = [
-    { name: "Optimism" },
-    { name: "Arbitrum" },
-    { name: "Aave" },
-    { name: "Compound" },
-    { name: "Uniswap" },
-  ];
+function Sidebar({ tasks, onDeleteTask }) {
+  const [storedCid, setStoredCid] = useState([]);
 
   useEffect(() => {
-    const fetchData = () => {
-      const addData = {};
+    const intervalId = setInterval(() => {
+      const localData =
+        JSON.parse(localStorage.getItem("clickedDaoName")) || {};
+      // console.log("Local Data: ", localData);
 
-      dao_info.forEach((dao) => {
-        const daoName = dao.name.toLowerCase(); // Convert dao name to lowercase for consistency
+      const localStorageKeys = Object.keys(localData);
 
-        const imageData = localStorage.getItem(daoName);
+      const configKeys = iconData.map((item) => item.key);
 
-        console.log("Image Data", imageData);
+      const commonKeys = localStorageKeys.filter((key) =>
+        configKeys.includes(key)
+      );
 
-        if (imageData) {
-          const parsedData = JSON.parse(imageData);
-          const src = parsedData.src;
-          console.log(`${dao.name} Image data: `, src);
-          addData[daoName] = src;
-        } else {
-          console.log(`${dao.name} - Error in fetching`);
-        }
+      const cids = commonKeys.map((key) => {
+        const configItem = iconData.find((item) => item.key === key);
+        return configItem ? configItem.img : "";
       });
-      setStoredSrc(addData);
-    };
-    fetchData();
-  }, []);
 
-  const handleTooltip = (name) => {
-    console.log("Tooltip name: ", name);
-    localStorage.removeItem(name);
-    console.log("Item removed");
-  };
+      // Update state with the cids
+      setStoredCid(cids);
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, []);
 
   return (
     <div className="py-4">
       <div className="flex flex-col items-center gap-y-3">
-        {dao_info.map((dao, index) => {
-          console.log("Daos: ", dao.name);
-          const daoName = dao.name.toLowerCase();
-          const src = storedSrc[daoName];
-          console.log("Source url: ", src);
-
-          return (
-            <a
+        {storedCid ? (
+          storedCid.map((cid, index) => (
+            <Image
               key={index}
-              data-tooltip-id="my-tooltip"
-              // data-tooltip-html="<Image src={close} alt='Image'/>"
-              // data-tooltip-html="<div style='background-color: red; padding: 8px; border-radius: 8px' onclick='handleTooltip(${dao.name})'>Leave</div>"
-              data-tooltip-place="right"
-              onMouseEnter={() => setIsOpen(true)}
-            >
-              <Image
-                src={src || ""}
-                alt="Image not found"
-                width={45}
-                height={45}
-                className="rounded-full cursor-pointer"
-                priority={true}
-                onMouseEnter={() => handleTooltip()}
-              ></Image>
-            </a>
-          );
-        })}
-        <Tooltip id="my-tooltip" isOpen={isOpen} />
+              src={`https://gateway.lighthouse.storage/ipfs/${cid}`}
+              alt="Image not found"
+              width={45}
+              height={45}
+              className="rounded-full cursor-pointer"
+              priority={true}
+              // onMouseEnter={() => handleTooltip()}
+            ></Image>
+          ))
+        ) : (
+          <></>
+        )}
       </div>
 
       <div className="flex justify-center cursor-pointer pt-4">
-        <div className="border border-black rounded-xl p-2.5 hover:border-[1.5px]">
+        <div
+          className="border border-black rounded-xl p-2.5 hover:border-[1.5px]"
+          // onClick={handleIcons}
+        >
           <Image
             src={plus}
             width={16}
