@@ -10,7 +10,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 
-function ExploreDAOs({ onAddTask }) {
+function ExploreDAOs() {
   const dao_info = [
     { name: "Optimism", value: "10876", img: op_logo },
     { name: "Arbitrum", value: "20569", img: arbi_logo },
