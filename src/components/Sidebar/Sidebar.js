@@ -78,6 +78,7 @@ function Sidebar() {
         {storedCid ? (
           storedCid.map((data, index) => (
             <div
+              key={index}
               className="flex flex-col items-center"
               onMouseEnter={() => handleMouseEnter(index)}
               onMouseLeave={() => handleMouseLeave(index)}
@@ -96,11 +97,10 @@ function Sidebar() {
                   alt="Image"
                   width={45}
                   height={45}
-                  className={`w-11 h-11 rounded-full cursor-pointer border-2 ${
-                    pathname.includes(`/all-daos/${data.name}`)
+                  className={`w-11 h-11 rounded-full cursor-pointer border-2 ${pathname.includes(`/all-daos/${data.name}`)
                       ? "border-green-600 border-[2.5px]"
                       : ""
-                  }`}
+                    }`}
                   priority={true}
                   onClick={() => handleImageClick(data.name)}
                 ></Image>
@@ -128,7 +128,7 @@ function Sidebar() {
       <div className="flex justify-center cursor-pointer pt-5">
         <div
           className="border border-black rounded-full p-3 hover:border-[1.5px]"
-          // onClick={handleIcons}
+        // onClick={handleIcons}
         >
           <Image
             src={plus}
