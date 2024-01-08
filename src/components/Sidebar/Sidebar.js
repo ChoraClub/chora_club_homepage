@@ -12,6 +12,7 @@ function Sidebar() {
   const [storedCid, setStoredCid] = useState([]);
   const router = useRouter();
   const pathname = usePathname();
+  const [badgeVisiblity, setBadgeVisibility] = useState([]);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -41,6 +42,10 @@ function Sidebar() {
     return () => clearInterval(intervalId);
   }, []);
 
+  useEffect(() => {
+    setBadgeVisibility(new Array(storedCid.length).fill(true));
+  }, 500);
+
   const handleBadgeClick = (name) => {
     // Remove the item from local storage
     const localData = JSON.parse(localStorage.getItem("clickedDaoName")) || {};
@@ -49,6 +54,18 @@ function Sidebar() {
 
     // Update state to reflect the change
     setStoredCid((prevState) => prevState.filter((item) => item.key !== name));
+  };
+
+  const handleMouseEnter = (index) => {
+    const updatedVisibility = [...badgeVisiblity];
+    updatedVisibility[index] = true;
+    setBadgeVisibility(updatedVisibility);
+  };
+
+  const handleMouseLeave = (index) => {
+    const updatedVisibility = [...badgeVisiblity];
+    updatedVisibility[index] = false;
+    setBadgeVisibility(updatedVisibility);
   };
 
   const handleImageClick = (name) => {
@@ -60,10 +77,15 @@ function Sidebar() {
       <div className="flex flex-col items-center gap-y-3">
         {storedCid ? (
           storedCid.map((data, index) => (
-            <div className="flex flex-col items-center">
+            <div
+              className="flex flex-col items-center"
+              onMouseEnter={() => handleMouseEnter(index)}
+              onMouseLeave={() => handleMouseLeave(index)}
+            >
               <Badge
+                isInvisible={!badgeVisiblity[index]}
                 content={<IoClose />}
-                className="p-[0.05rem] cursor-pointer"
+                className="p-[0.05rem] cursor-pointer top-[10%] right-[10%]"
                 color="danger"
                 size="md"
                 onClick={() => handleBadgeClick(data.name)}
