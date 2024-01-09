@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import plus from "@/assets/sidebar/plus.png";
+import home from "@/assets/sidebar/home.png";
 import Image from "next/image";
 import { iconData } from "../../../config";
 import { Badge } from "@nextui-org/react";
@@ -49,11 +49,13 @@ function Sidebar() {
   const handleBadgeClick = (name) => {
     // Remove the item from local storage
     const localData = JSON.parse(localStorage.getItem("clickedDaoName")) || {};
+    // console.log("Badge click: ", localData);
     delete localData[name];
     localStorage.setItem("clickedDaoName", JSON.stringify(localData));
 
     // Update state to reflect the change
     setStoredCid((prevState) => prevState.filter((item) => item.key !== name));
+    router.push(`/all-daos`);
   };
 
   const handleMouseEnter = (index) => {
@@ -86,7 +88,7 @@ function Sidebar() {
               <Badge
                 isInvisible={!badgeVisiblity[index]}
                 content={<IoClose />}
-                className="p-[0.05rem] cursor-pointer top-[10%] right-[10%]"
+                className="p-[0.1rem] cursor-pointer top-[10%] right-[10%]"
                 color="danger"
                 size="md"
                 onClick={() => handleBadgeClick(data.name)}
@@ -97,23 +99,15 @@ function Sidebar() {
                   alt="Image"
                   width={45}
                   height={45}
-                  className={`w-11 h-11 rounded-full cursor-pointer border-2 ${pathname.includes(`/all-daos/${data.name}`)
+                  className={`w-11 h-11 rounded-full cursor-pointer border-2 ${
+                    pathname.includes(`/all-daos/${data.name}`)
                       ? "border-green-600 border-[2.5px]"
                       : ""
-                    }`}
+                  }`}
                   priority={true}
                   onClick={() => handleImageClick(data.name)}
                 ></Image>
               </Badge>
-
-              {/* <div className="tooltip">
-                <button
-                  onClick={() => handleCancelClick(data.name)}
-                  className="text-xs"
-                >
-                  Remove
-                </button>
-              </div> */}
 
               <div>
                 <hr />
@@ -127,16 +121,10 @@ function Sidebar() {
 
       <div className="flex justify-center cursor-pointer pt-5">
         <div
-          className="border border-black rounded-full p-3 hover:border-[1.5px]"
-        // onClick={handleIcons}
+          className="border-2 rounded-full p-2 hover:border-slate-300"
+          onClick={() => router.push("/all-daos")}
         >
-          <Image
-            src={plus}
-            width={16}
-            alt="image not found"
-            className=""
-            priority={true}
-          />
+          <Image src={home} width={28} alt="image" className="" />
         </div>
       </div>
     </div>

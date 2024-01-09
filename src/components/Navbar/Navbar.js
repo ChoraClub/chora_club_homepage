@@ -35,7 +35,7 @@ function Navbar() {
                 </Link>
               </li> */}
 
-              <li className="px-2">
+              <li className="md:px-2">
                 <div className="bg-light-navy-blue px-2 py-1 rounded-full font-medium text-xs xs:px-3 xs:text-sm sm:text-base sm:px-4 md:px-5 md:py-2">Connect </div>
               </li>
             </ul>
