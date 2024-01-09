@@ -100,10 +100,14 @@ function HowItWorks() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="text-lg xs:text-xl sm:text-2xl md:text-xl 2xm:text-2xl lg:text-3xl font-semibold text-light-navy-blue py-3">
-                  {data.title}
+                <div className="md:h-[9rem] xl:h-[7rem]">
+                  <div className="text-lg xs:text-xl sm:text-2xl md:text-xl 2xm:text-2xl lg:text-3xl font-semibold text-light-navy-blue py-3">
+                    {data.title}
+                  </div>
+                  <div className="text-sm pb-5 xs:w-5/6 mx-auto">
+                    {data.text}
+                  </div>
                 </div>
-                <div className="text-sm pb-5 xs:w-5/6 mx-auto">{data.text}</div>
                 <div>
                   <button className="p-3 xs:p-4 border-black border-2 text-sm font-semibold rounded-full hover:bg-black hover:text-white">
                     {data.buttonText}
