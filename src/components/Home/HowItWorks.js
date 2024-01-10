@@ -94,7 +94,7 @@ function HowItWorks() {
                       className=" hover:scale-105 transition-scale duration-700 ease-in-out"
                       priority={true}
                       quality={100}
-                      // sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
+                      sizes="(min-width: 980px) 384px, calc(47.58vw - 73px)"
                     ></Image>
                   </div>
                 </div>

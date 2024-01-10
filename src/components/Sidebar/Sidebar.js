@@ -46,7 +46,7 @@ function Sidebar() {
     setBadgeVisibility(new Array(storedCid.length).fill(true));
   }, 500);
 
-  const handleBadgeClick = (name) => {
+  const handleBadgeClick = (name, index) => {
     // Remove the item from local storage
     const localData = JSON.parse(localStorage.getItem("clickedDaoName")) || {};
     // console.log("Badge click: ", localData);
@@ -55,6 +55,8 @@ function Sidebar() {
 
     // Update state to reflect the change
     setStoredCid((prevState) => prevState.filter((item) => item.key !== name));
+    setBadgeVisibility(new Array(storedCid.length).fill(false));
+
     router.push(`/all-daos`);
   };
 
@@ -91,7 +93,7 @@ function Sidebar() {
                 className="p-[0.1rem] cursor-pointer top-[10%] right-[10%]"
                 color="danger"
                 size="md"
-                onClick={() => handleBadgeClick(data.name)}
+                onClick={() => handleBadgeClick(data.name, index)}
               >
                 <Image
                   key={index}
