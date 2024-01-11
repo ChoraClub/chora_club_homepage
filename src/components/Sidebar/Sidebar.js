@@ -60,13 +60,13 @@ function Sidebar() {
     router.push(`/all-daos`);
   };
 
-  const handleMouseEnter = (index) => {
+  const handleMouseOver = (index) => {
     const updatedVisibility = [...badgeVisiblity];
     updatedVisibility[index] = true;
     setBadgeVisibility(updatedVisibility);
   };
 
-  const handleMouseLeave = (index) => {
+  const handleMouseOut = (index) => {
     const updatedVisibility = [...badgeVisiblity];
     updatedVisibility[index] = false;
     setBadgeVisibility(updatedVisibility);
@@ -84,8 +84,8 @@ function Sidebar() {
             <div
               key={index}
               className="flex flex-col items-center"
-              onMouseEnter={() => handleMouseEnter(index)}
-              onMouseLeave={() => handleMouseLeave(index)}
+              onMouseOver={() => handleMouseOver(index)}
+              onMouseOut={() => handleMouseOut(index)}
             >
               <Badge
                 isInvisible={!badgeVisiblity[index]}
