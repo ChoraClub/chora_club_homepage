@@ -22,7 +22,7 @@ function Footer() {
         </div>
 
         <div className=" text-white text-center text-xs">
-          Copyright © 2023 Chora Club | All rights reserved
+          Copyright © 2024 Chora Club | All rights reserved
         </div>
 
         <div className="flex justify-center pt-6 gap-x-8 xs:gap-x-9 sm:gap-x-10 pb-4">
