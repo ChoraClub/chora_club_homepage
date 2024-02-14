@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import hero from "@/assets/home/hero-img2.png";
 import rocket from "@/assets/home/rocket.png";
+import Link from "next/link";
 
 function HomeHero() {
   return (
@@ -15,14 +16,18 @@ function HomeHero() {
           A human-centric approach to unlocking Web3 ecosystems!
         </div>
         <div className="font-poppins">
-          <button className="flex bg-light-navy-blue rounded-full items-center">
+        <Link
+            href={`https://app.chora.club/`}
+            target="_blank"
+            className="flex bg-light-navy-blue rounded-full items-center w-fit"
+          >
             <div className="text-white text-xs px-2 py-2 xs:py-[0.6rem] xs:text-sm xs:px-3 sm:px-0 sm:py-4 sm:ps-7 sm:pe-4">
               Start Your Journey
             </div>
             <div className="border border-white rounded-full p-1 me-[0.3rem] xs:p-2 xs:me-[0.4rem] sm:p-3 sm:me-2">
               <Image src={rocket} width={10} alt="rocket"></Image>
             </div>
-          </button>
+          </Link>
         </div>
       </div>
       <div className="lg:col-span-2">
