@@ -3,7 +3,7 @@ import illustration from "@/assets/home/illustration.png";
 import Image from "next/image";
 import connect from "@/assets/home/connect.png";
 import future from "@/assets/home/future.png";
-
+import Link from "next/link";
 function HowItWorks() {
   const backgrounds = [
     "bg-home-working-texture",
@@ -32,6 +32,7 @@ function HowItWorks() {
       title: "Eager to Connect in Web3?",
       text: "Chora Club is your gateway to tailored learning, community engagement, and endless opportunities",
       buttonText: "Start Your Journey",
+      link:"https://app.chora.club"
     },
 
     {
@@ -39,6 +40,7 @@ function HowItWorks() {
       title: "Ready to Shape the Future of Web3?",
       text: "Your expertise matters in guiding the next wave of web3 enthusiasts",
       buttonText: "Join as a Delegate",
+      link:"https://app.chora.club"
     },
   ];
 
@@ -109,9 +111,11 @@ function HowItWorks() {
                   </div>
                 </div>
                 <div>
+                  <Link href={data.link}>
                   <button className="p-3 xs:p-4 border-black border-2 text-sm font-semibold rounded-full hover:bg-black hover:text-white">
                     {data.buttonText}
                   </button>
+                  </Link>
                 </div>
               </div>
             </div>
