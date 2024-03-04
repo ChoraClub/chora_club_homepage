@@ -18,7 +18,7 @@ function Navbar() {
     <header className="font-poppins">
       {/* <ConnectButton className="connectbutton" /> */}
       <div className="m-3 bg-black sticky top-0 rounded-full">
-        <div className="px-4 py-3">
+        <div className="px-4 py-5">
           <div className="flex justify-between items-center h-full">
             <Link
               href="/"
