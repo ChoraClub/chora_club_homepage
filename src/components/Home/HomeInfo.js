@@ -13,7 +13,7 @@ function HomeInfo() {
   return (
     <div className="py-10 px-5 xs:px-8 sm:py-8 sm:px-12 md:py-10 md:px-14 font-poppins">
       <div
-        // style={{ borderRadius: "36px" }}
+        style={{ borderRadius: "36px" }}
         className="bg-home-info-texture bg-cover p-8 sm:p-12 md:p-10 lg:p-14"
       >
         <div className="font-medium text-center text-white pt-4 pb-8 text-2xl sm:pb-10 sm:text-3xl lg:text-4xl lg:pb-12 ">

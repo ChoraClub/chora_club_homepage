@@ -63,8 +63,8 @@ function Faqs() {
             key={index}
             onClick={() => toggleAccordion(index)}
 
-            // style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07)" }}
-            className="flex flex-col rounded-xl px-4 py-[0.6rem] my-3 xs:px-5 xs:py-3 xs:my-4 sm:px-6 sm:py-4 sm:my-5 cursor-pointer shadow-[0px_4px_33.7px_0px_rgba(0, 0, 0, 0.07)]"
+            style={{ boxShadow: "0px 4px 33.7px 0px rgba(0, 0, 0, 0.07)" }}
+            className="flex flex-col rounded-xl px-4 py-[0.6rem] my-3 xs:px-5 xs:py-3 xs:my-4 sm:px-6 sm:py-4 sm:my-5 cursor-pointer"
           >
             <div className="flex flex-row items-center">
               <p
