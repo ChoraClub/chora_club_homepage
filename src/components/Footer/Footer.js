@@ -5,6 +5,7 @@ import Link from "next/link";
 import twitter from "@/assets/footer/twitter.png";
 import telegram from "@/assets/footer/telegram.png";
 import discord from "@/assets/footer/discord.png";
+import mirror from "@/assets/footer/Mirror.png";
 
 function Footer() {
   return (
@@ -47,6 +48,14 @@ function Footer() {
               src={telegram}
               className="w-9 xs:w-10 cursor-pointer"
               alt="telegram"
+            ></Image>
+          </Link>
+
+          <Link href="https://mirror.xyz/0x30d644CBf785167D8CaBcB35602959E19D9004Db" target="_blank">
+            <Image
+              src={mirror}
+              className="w-9 xs:w-10 cursor-pointer"
+              alt="mirror"
             ></Image>
           </Link>
         </div>
