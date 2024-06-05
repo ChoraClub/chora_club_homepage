@@ -23,8 +23,34 @@ const quanty = localFonts({
 });
 
 export const metadata = {
+  metadataBase: new URL("https://app.chora.club/"),
   title: "Chora Club",
   description: "Discover. Learn. Engage.",
+  icons: {
+    icon: ["/favicon.png"],
+  },
+  openGraph: {
+    title: "Chora Club",
+    description: "Discover. Learn. Engage.",
+    url: "https://app.chora.club/",
+    siteName: "Chora Club",
+    images: [
+      {
+        url: "https://gateway.lighthouse.storage/ipfs/QmZmWxpdhQZnag8HZtwZPLR5wtK2jjfgsTBMpNpmijtZ5x",
+        width: 800,
+        height: 600,
+        alt: "img",
+      },
+      {
+        url: "https://gateway.lighthouse.storage/ipfs/QmZmWxpdhQZnag8HZtwZPLR5wtK2jjfgsTBMpNpmijtZ5x",
+        width: 1800,
+        height: 1600,
+        alt: "img",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -43,7 +69,8 @@ export default function RootLayout({ children }) {
                       'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-56VHGZ3X');
               `,
-          }}></script>
+          }}
+        ></script>
       </head>
       <body className={`${quanty.variable} ${poppins.variable}`}>
         <noscript
