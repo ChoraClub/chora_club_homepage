@@ -43,22 +43,23 @@ export default function RootLayout({ children }) {
                       'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
           })(window, document, 'script', 'dataLayer', 'GTM-56VHGZ3X');
               `,
-          }}>
-        </script>
+          }}></script>
       </head>
       <body className={`${quanty.variable} ${poppins.variable}`}>
-        <noscript dangerouslySetInnerHTML={{
-          __html: `
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `
             <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56VHGZ3X"
             height="0" width="0" style="display:none;visibility:hidden"></iframe>
               `,
-        }} />
+          }}
+        />
         {/* <Providers> */}
         <Navbar />
         {children}
         <Footer />
         {/* </Providers> */}
       </body>
-    </html >
+    </html>
   );
 }

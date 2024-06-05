@@ -23,11 +23,9 @@ function Navbar() {
             <Link
               href="/"
               className="pl-2 xs:pl-4 sm:pl-6 md:pl-8"
-              onClick={handleSmallerScreenNav}
-            >
+              onClick={handleSmallerScreenNav}>
               <Image src={logo} alt="logo" className="w-36 md:w-44"></Image>
             </Link>
-
           </div>
         </div>
       </div>
